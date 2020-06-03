@@ -31,10 +31,6 @@ for case in range(1, T+1):
 
     x, y = map(int, input().split(" "))
 
-    if (x+y) % 2 == 0:
-        result = 'IMPOSSIBLE'
-    else:
-        result = get_route(x, y)
-
+    result = 'IMPOSSIBLE' if (x+y) % 2 == 0 else get_route(x, y)
     print('Case #{case}: {result}'.format(case=case, result=''.join(result)))
 

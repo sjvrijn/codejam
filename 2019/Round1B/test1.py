@@ -6,7 +6,7 @@ for case in range(1, num_cases+1):
     num_people, size = map(int, input().split())
 
     manhattan = np.zeros((size+1, size+1))
-    for p in range(num_people):
+    for _ in range(num_people):
         x, y, direction = input().split()
         x, y = int(x), int(y)
         if direction == 'N':

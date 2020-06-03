@@ -5,10 +5,7 @@ T = int(input())
 for case in range(1, T+1):
 
     N = int(input())
-    array = []
-    for _ in range(N):
-        array.append(list(map(int, input().split(' '))))
-
+    array = [list(map(int, input().split(' '))) for _ in range(N)]
     array = np.array(array)
     trace = np.sum(np.diagonal(array))
 

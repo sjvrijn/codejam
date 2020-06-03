@@ -8,15 +8,12 @@ for case in range(1, T+1):
     schedule = np.zeros((2, 24*60))
     N = int(input())
 
-    activities = []
-    for i in range(N):
-        activities.append((i, *tuple(map(int, input().split(' ')))))
-
+    activities = [(i, *tuple(map(int, input().split(' ')))) for i in range(N)]
     activities.sort(key=itemgetter(1))
 
     planning = [None] * N
     for idx, start, end in activities:
-        
+
         if np.sum(schedule[0, start:end]) == 0:
             schedule[0, start:end] = 1
             planning[idx] = 'C'

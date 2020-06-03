@@ -5,6 +5,4 @@ num_cases = int(input())
 for case in range(1, num_cases+1):
     arguments = map(int, input().split())
 
-    pass
-
     print("Case #{case}: {answer}".format(case=case, answer=''))

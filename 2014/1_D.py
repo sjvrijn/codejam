@@ -4,7 +4,7 @@ from __future__ import division
 def kenPicks(ken, naomi):
 
     heavier = [block for block in ken if block > naomi]
-    if len(heavier) == 0:
+    if not heavier:
         return min(ken)
     else:
         return min(heavier)

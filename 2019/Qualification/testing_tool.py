@@ -49,7 +49,7 @@ class Case:
         if len(bitstring) != self.__N:
             return (None, _ERROR_MSG_INVALID_TOKEN)
         # Bitstring must contain only 0 and 1
-        if not all([x in '01' for x in bitstring]):
+        if any(x not in '01' for x in bitstring):
             return (None, _ERROR_MSG_INVALID_TOKEN)
         return (bitstring, None)
 
